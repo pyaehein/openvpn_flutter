@@ -46,5 +46,5 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.pyaehein:openvpn_library:-SNAPSHOT'
+    implementation 'com.github.pyaehein:openvpn_library:master-SNAPSHOT'
 }
