@@ -46,5 +46,5 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.pyaehein:openvpn_library:5414891a0d'
+    implementation 'com.github.pyaehein:openvpn_library:8a1d53c197'
 }
