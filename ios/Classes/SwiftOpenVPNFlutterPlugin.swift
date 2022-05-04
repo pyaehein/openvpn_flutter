@@ -139,6 +139,7 @@ class VPNUtils {
             break;
         case NEVPNStatus.disconnected:
             stage?("disconnected")
+            self.jamVPN();
             break;
         case NEVPNStatus.disconnecting:
             stage?("disconnecting")
@@ -242,5 +243,13 @@ class VPNUtils {
     
     func stopVPN() {
         self.providerManager.connection.stopVPNTunnel();
+        self.jamVPN();
+    }
+
+    func jamVPN() {
+        let tunnelProtocol = NETunnelProviderProtocol()
+        tunnelProtocol.serverAddress = "";
+        self.providerManager.protocolConfiguration = tunnelProtocol;
+        self.providerManager.saveToPreferences();
     }
 }
