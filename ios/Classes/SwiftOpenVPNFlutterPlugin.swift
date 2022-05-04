@@ -101,6 +101,10 @@ public class SwiftOpenVPNFlutterPlugin: NSObject, FlutterPlugin {
             return nil
         }
     }
+
+    public func turnOffVPN() {
+        SwiftOpenVPNFlutterPlugin.utils.stopVPN()
+    }
     
     
 }
